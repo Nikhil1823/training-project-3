@@ -640,3 +640,130 @@ span.lg-color-wheel {
 .lg-checker-radio {
     border-radius: 50%;
 }
+
+
+
+
+/* div right portion  */
+div.lg-right-results {
+    flex: 1 1 0%;
+    align-self: flex-start;
+}
+
+div.lg-right-results .lg-result-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.lg-result-header section.lg-header-section {
+    width: 100%;
+    height: 59.8px;
+    border-bottom: 1px solid #eaeaec;
+    padding-bottom: 15px;
+    padding-top: 23px;
+}
+
+section.lg-header-section div.lg-sorting-section {
+    display: block;
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 0;
+    margin-top: -7px;
+    position: relative;
+    top: -5px;
+}
+
+div.lg-sorting-section div.lg-sort-by {
+    padding: 9px 14px;
+    font-size: 14px;
+    color: #282c3f;
+    cursor: pointer;
+    position: relative;
+    width: 255px;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid #d4d5d9;
+}
+
+div.lg-sort-by span.lg-arrow {
+    background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+    background-size: 1404px 105px;
+    display: block;
+    background-position: -367px -1px;
+    width: 15px;
+    height: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    float: right;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #282c3f;
+}
+
+span.lg-sort-selected {
+    font-weight: 700;
+
+}
+
+ul.lg-sort-list {
+    width: 255px;
+    background-color: #fff;
+    position: absolute;
+    top: 33px;
+    left: -1px;
+    margin: 0;
+    padding: 16px 0;
+    z-index: 2;
+    display: none;
+    border: 1px solid #d4d5d9;
+    border-top: none;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, .08);
+}
+
+.sort-label {
+    display: block;
+    font-size: 14px;
+    color: #282c3f;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+ul.selected-sort-list {
+    font-size: 14px;
+
+    display: flex;
+    color: #282c3f;
+    flex-flow: row wrap;
+    margin: -10px 0 0 16px;
+}
+
+ul.selected-sort-list li {
+    margin: 10px 4px 0 0;
+}
+
+ul.selected-sort-list li label {
+    position: relative;
+    padding: 5px 8px 5px 10px;
+    white-space: nowrap;
+}
+
+label h4.selected-option {
+    font-weight: 400;
+    display: inline-block;
+}
+
+.lg-sort-arrow {
+    background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+    background-position: -2679px -89px;
+    background-size: 1404px 105px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    transform: scale(.8);
+    margin-left: 1.3px;
+
+}
