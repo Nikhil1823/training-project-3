@@ -22,29 +22,45 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: #282c3f;
+}
+
+li,
+a {
+
+    text-decoration: none;
+    list-style-type: none;
 }
 
 header.lg-header {
 
-    position: fixed;
-    z-index: 2;
+    z-index: 20;
     inset: 0;
+    position: fixed;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
+
+    height: 80px;
     background-color: #fff;
 }
 
 div.lg-header-wrapper {
+    z-index: 3;
+    position: relative;
+    background-color: #fff;
     line-height: 80px;
     min-width: 980px;
     margin: auto;
+    /* box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05); */
+    /* display: flex; */
+
 }
 
 div.lg-header-wrapper div.lg-logo-container {
-    display: flex;
     margin-left: 4%;
+    /* margin-left: 2%; */
     height: inherit;
     line-height: 80px;
-    /* vertical-align: middle; */
+    vertical-align: middle;
     float: left;
 }
 
@@ -52,11 +68,12 @@ div.lg-logo-container a.lg-logo {
     display: inline-block;
     vertical-align: middle;
     width: 53px;
-    align-self: center;
+    /* align-self: center; */
     height: 36px;
-    background-image: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+    background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
     background-position: -462px 0;
     background-size: 1404px 105px;
+    line-height: 80px;
 
 }
 
@@ -65,6 +82,9 @@ div.lg-header-wrapper div.lg-left-nav {
     margin: 0 0 0 1%;
     text-align: center;
     line-height: 80px;
+    height: 80px;
+    text-transform: uppercase;
+    float: left;
 
 }
 
@@ -81,4 +101,542 @@ div.lg-left-nav span.lg-text-wrapper a.lg-text {
     font-weight: 700;
     text-transform: uppercase;
     display: inline-block;
+}
+
+span.lg-text-wrapper span.lg-hover-container {
+    margin: 0 0 34px -15px;
+    display: inline;
+    font-weight: 600;
+    font-size: 10px;
+    text-align: left;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ff3f6c;
+}
+
+span.lg-hover-container span.lg-hover-text {
+    top: -.4rem;
+    font-size: 100%;
+    line-height: 0;
+    position: relative;
+    text-align: left;
+    vertical-align: baseline;
+    text-transform: uppercase;
+    left: -1.4px;
+    color: #ff3f6c;
+}
+
+
+
+div.lg-header-wrapper div.lg-nav-middle {
+    width: 320px;
+    margin-right: 8px;
+    margin: 20px 8px 20px 40px;
+    line-height: 0;
+    position: relative;
+    float: right;
+    /* display: flex; */
+}
+
+
+
+
+div.lg-nav-middle input {
+    display: inline-block;
+    height: 20px;
+    line-height: 24px;
+    color: #696e79;
+    outline: 0;
+    background: #f5f5f6;
+    padding: 8px 10px 10px;
+    border: 1px solid #f5f5f6;
+    border-radius: 0 4px 4px 0;
+    border-left: 0;
+    width: 95%;
+    font-size: 14px;
+    box-sizing: content-box;
+}
+
+div.lg-nav-middle a.lg-search-icon-wrapper {
+    box-sizing: content-box;
+    display: inline-block;
+    height: 28px;
+    width: 40px;
+    text-align: center;
+    padding: 8px 0 2px;
+    background: #f5f5f6;
+    border: 1px solid #f5f5f6;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    position: absolute;
+    left: -41px;
+}
+
+a.lg-search-icon-wrapper span.lg-search-icon {
+    width: 21px;
+    background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+    height: 21px;
+    background-position: -754px 0;
+    display: inline-block;
+    background-size: 1404px 105px;
+    transform: scale(0.7);
+}
+
+div.lg-header-wrapper div.lg-nav-right {
+    margin: 20px 0 0 10px;
+    display: flex;
+    height: 40px;
+    line-height: 0px;
+    float: right;
+}
+
+div.lg-nav-right div.lg-profile-container {
+    position: relative;
+    height: 60px;
+    margin: 0 20px 0 15px;
+    /* display: flex; */
+
+}
+
+div.lg-profile-container div.lg-profile-wrapper {
+    padding: 0 12px 0 17px;
+    position: relative;
+    display: flex;
+    height: 40px;
+}
+
+div.lg-profile-wrapper span.lg-profile-icon {
+    background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+    background-size: 1404px 105px;
+    width: 24px;
+    height: 24px;
+    background-position: -298px -56px;
+    margin: 10px 0 0;
+    position: absolute;
+    bottom: 13px;
+    left: 5px;
+    display: inline-block;
+}
+
+div.lg-profile-wrapper span.lg-profile-text {
+
+    color: #000;
+    position: absolute;
+    bottom: 4px;
+    left: 1px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    padding-top: 10px;
+    line-height: 6px;
+}
+
+
+div.lg-nav-right a.lg-wishlist-container {
+    margin: 0 55px 0 10px;
+    display: flex;
+    line-height: 0px;
+    position: relative;
+}
+
+
+
+a.lg-wishlist-container span.lg-wish-icon {
+    background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+    background-size: 1404px 105px;
+    display: inline-block;
+    width: 17px;
+    height: 22px;
+    background-position: -315px -187px;
+    margin: 8px 0 0;
+    position: absolute;
+    bottom: 14px;
+    left: 13px;
+}
+
+
+a.lg-wishlist-container span.lg-wish-text {
+    color: #000;
+    position: absolute;
+    bottom: 4px;
+    left: 1px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    padding-top: 10px;
+    line-height: 6px;
+}
+
+a.lg-nav-bag-container {
+    display: flex;
+    margin: 0 50px 0 15px;
+    position: relative;
+}
+
+a.lg-nav-bag-container span.lg-bag-icon {
+    margin: 8px 0 0;
+    position: absolute;
+    bottom: 14px;
+    left: -1px;
+    background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+    background-size: 1404px 105px;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-position: -341px -56px;
+}
+
+a.lg-nav-bag-container span.lg-bag-text {
+    color: #000;
+    position: absolute;
+    bottom: 4px;
+    left: 1px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    padding-top: 10px;
+    line-height: 6px;
+}
+
+main.content-wrapper {
+    max-width: 1600px;
+    margin: 81px auto 0;
+}
+
+main.content-wrapper div.filter-headers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+div.filter-headers div.filter-content {
+    vertical-align: top;
+    padding: 20px 0 0;
+
+
+}
+
+div.filter-content ul.content {
+    font-size: 14px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 0 0 25px;
+    vertical-align: top;
+
+}
+
+ul.content li {
+    font-size: 14px;
+
+    display: inline-block;
+    margin-right: 2px;
+    text-transform: capitalize;
+    line-height: 1;
+    overflow: hidden;
+}
+
+ul.content li a {
+    color: #282c3f;
+    text-transform: capitalize;
+}
+
+ul.content li a span {
+    color: #282c3f;
+    /* margin-left: -5px; */
+
+}
+
+ul.content li::after {
+    font-size: 14px;
+    content: "/";
+    margin-left: 5px;
+    color: #282c3f;
+}
+
+ul.content li:last-child::after {
+    content: '';
+
+}
+
+.lg-bold {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+div.lg-title-container {
+    margin: 10px 0 5px 25px;
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+div.lg-title-container h1.lg-title {
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #282c3f;
+    max-width: 400px;
+    text-transform: capitalize;
+    display: inline-block;
+    font-size: 16px;
+}
+
+div.lg-title-container span.lg-result-count {
+    color: #878b94;
+    white-space: pre-wrap;
+    display: inline-block;
+    font-size: 16px;
+}
+
+div.lg-result-wrapper div.lg-left-filters {
+    min-width: 252px;
+    max-width: 252px;
+    align-self: flex-start;
+    -webkit-box-orient: vertical;
+}
+
+div.lg-left-filters aside.lg-left-filters-column {
+    padding-top: 23px;
+}
+
+aside.lg-left-filters-column .lg-filter-wrappers {
+    padding-bottom: 15px;
+    padding-left: 25px;
+    border-bottom: 1px solid #e9e9ed;
+    position: relative;
+}
+
+.lg-filter-wrappers span.lg-filter-text {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+div.lg-category.lg-filter-wrappers {
+    padding-top: 20px;
+    border-right: 1px solid #edebef;
+    font-size: 14px;
+}
+
+div.lg-filter-wrappers ul.lg-filter {
+    /* margin-top: 18px; */
+    position: relative;
+}
+
+li.common-list-items {
+    margin-bottom: 7px;
+    position: relative;
+}
+
+label.lg-common-label {
+    /* display: block; */
+    width: 95%;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 17px;
+    color: #282c3f;
+
+}
+
+.common-input-style {
+    margin-right: 16px;
+    visibility: hidden;
+}
+
+.lg-default-checker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #c3c2c9;
+    background: #fff;
+    border-radius: 2px;
+
+}
+
+ul.lg-filter li label span.lg-filter-count {
+    color: #94969f;
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+div.lg-filter-wrappers ul.lg-filter li:last-child {
+    margin-bottom: 0;
+    position: relative;
+}
+
+.lg-brand-text.lg-filter-text {
+    margin-bottom: 18px;
+    display: inline-block;
+}
+
+div.lg-search-btn {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    background-color: #f5f5f6;
+    border-radius: 50%;
+}
+
+div.lg-search-btn span.lg-search-icon {
+    display: inline-block;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+    background-size: 1404px 105px;
+    transform: scale(.7);
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    background-position: -754px 0;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+div.lg-more-brand {
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #ff3f6c;
+    margin-left: 27px;
+}
+
+div.lg-double-slider-wrapper {
+    margin: 12px 0 4px;
+}
+
+div.lg-double-slider-wrapper div.lg-double-slider-inner {
+    width: 200px;
+    margin-right: 16px;
+}
+
+div.lg-double-slider-inner div.lg-slider-rail {
+    position: relative;
+    height: 12px;
+    background-color: #fff;
+}
+
+div.lg-slider-rail div.lg-slider-rail-bar {
+    position: absolute;
+
+    transform: translateY(-50%);
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #d4d5d9;
+}
+
+div.lg-slider-rail div.lg-slider-rail-range {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 2px;
+    top: 5px;
+    background-color: #ff3f6c;
+}
+
+div.lg-slider-rail div.lg-slider-button {
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #ff3f6c;
+    outline: none;
+    left: 0;
+    transform: translateX(-75%);
+}
+
+div.lg-slider-rail div.lg-slider-button div.lg-slider-button-thumb {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    top: 4px;
+    left: 4px;
+    position: absolute;
+
+}
+
+div.lg-slider-rail div.lg-slider-button.right-thumb {
+    left: 200px;
+    transform: translateX(-25%);
+}
+
+div.lg-double-slider-inner div.lg-slider-value {
+    margin: 10px -4px 0 4px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+
+}
+
+span.lg-color-wheel {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 27px;
+    vertical-align: top;
+    line-height: 16px;
+}
+
+.black {
+
+    background-color: rgb(54, 69, 79);
+}
+
+.white {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #d6d6d6;
+}
+
+.blue {
+    background-color: rgb(0, 116, 217);
+}
+
+.green {
+
+    background-color: rgb(94, 177, 96);
+}
+
+.navy {
+    background-color: rgb(60, 68, 119);
+}
+
+.grey {
+    background-color: rgb(159, 168, 171);
+}
+
+.red {
+    background-color: rgb(211, 75, 86);
+}
+
+.hidden {
+    display: none;
+}
+
+.common-radio-icon {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.lg-checker-radio {
+    border-radius: 50%;
 }
