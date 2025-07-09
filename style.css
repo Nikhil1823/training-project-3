@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Assistant';
+    src: url('https://constant.myntassets.com/www/fonts/Assistant-Regular.eot');
+    src: url('https://constant.myntassets.com/www/fonts/Assistant-Regular.eot?#iefix') format('embedded-opentype'), url('https://constant.myntassets.com/www/fonts/Assistant-Regular.woff') format('woff'), url('https://constant.myntassets.com/www/fonts/Assistant-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Assistant';
+    src: url('https://constant.myntassets.com/www/fonts/Assistant-Bold.eot');
+    src: url('https://constant.myntassets.com/www/fonts/Assistant-Bold.eot?#iefix') format('embedded-opentype'), url('https://constant.myntassets.com/www/fonts/Assistant-Bold.woff') format('woff'), url('https://constant.myntassets.com/www/fonts/Assistant-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+* {
+    font-family: 'Assistant';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header.lg-header {
+
+    position: fixed;
+    z-index: 2;
+    inset: 0;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
+    background-color: #fff;
+}
+
+div.lg-header-wrapper {
+    line-height: 80px;
+    min-width: 980px;
+    margin: auto;
+}
+
+div.lg-header-wrapper div.lg-logo-container {
+    display: flex;
+    margin-left: 4%;
+    height: inherit;
+    line-height: 80px;
+    /* vertical-align: middle; */
+    float: left;
+}
+
+div.lg-logo-container a.lg-logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 53px;
+    align-self: center;
+    height: 36px;
+    background-image: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+    background-position: -462px 0;
+    background-size: 1404px 105px;
+
+}
+
+div.lg-header-wrapper div.lg-left-nav {
+    display: flex;
+    margin: 0 0 0 1%;
+    text-align: center;
+    line-height: 80px;
+
+}
+
+div.lg-left-nav span.lg-text-wrapper a.lg-text {
+    padding: 0 17px 28px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: .3px;
+    color: #282c3f;
+    border-bottom: none;
+    -webkit-transition: left .2s ease-out, width .2s ease-out;
+    transition: left .2s ease-out, width .2s ease-out;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
