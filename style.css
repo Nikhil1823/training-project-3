@@ -1118,39 +1118,109 @@ tr {
     text-transform: uppercase;
     font-weight: 700;
     color: #696b79 !important;
-    
+
 }
-div.lg-footer-desc p{
+
+div.lg-footer-desc p {
     color: rgb(126, 129, 140);
 }
-.sp{
+
+.sp {
     font-weight: 700;
     color: #7e818c;
 }
-.prop-header{
+
+.prop-header {
     margin-bottom: -10px;
     margin-top: 30px;
 }
-  li.spf-li{
-     list-style-type: disc;
-     color: #7e818c;
 
-  }
+li.spf-li {
+    list-style-type: disc;
+    color: #7e818c;
 
-em{
+}
+
+em {
     color: #696b79;
 
 }
-.spf-color{
+
+.spf-color {
     color: #7e818c;
 }
 
-.extra-size{
+.extra-size {
     font-size: 16.38px;
 
 }
 
-iframe{
+iframe {
     height: 315px;
     width: 560px;
+}
+
+.lg-footer-section-2 {
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+div.lg-common-link {
+    float: left;
+    width: 155px;
+    vertical-align: top;
+    padding-right: 20px;
+    box-sizing: content-box;
+
+}
+
+div.lg-cust-policy {
+    width: 15%;
+    float: left;
+}
+
+div.lg-experience {
+    width: 360px;
+    font-size: 15px;
+    line-height: 19px;
+    padding-top: 13px;
+    box-sizing: content-box;
+}
+
+div.lg-assure {
+    width: 250px;
+    float: left;
+}
+
+.lg-common-link-header {
+    margin: 12px 0;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+
+}
+
+.lg-common-link-items {
+    color: #696b79;
+    display: block;
+    font-size: 15px;
+    padding-bottom: 5px;
+    line-height: normal;
+}
+
+.extra-padding {
+    padding-top: 14px;
+}
+
+.spf-p {
+    margin: -3px 0 0;
+    padding: 0 0 25px;
+
+}
+
+.lg-keep-touch {
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    margin-top: 20px;
 }
