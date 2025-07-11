@@ -1337,6 +1337,7 @@ div.lg-assure-org {
 }
 
 @media screen and (max-width:768px) {
+
     /* @font-face {
             font-family: Assistant;
             src: url(//constant.myntassets.com/www/fonts/Assistant-Regular.woff2) format('woff2'), url(//constant.myntassets.com/www/fonts/Assistant-Regular.woff) format('woff'), url(//constant.myntassets.com/www/fonts/Assistant-Regular.ttf) format('truetype');
@@ -1458,6 +1459,65 @@ div.lg-assure-org {
         margin-right: 16px;
     }
 
+    .sm-filters-div {
+        position: fixed;
+        bottom: 0;
+        background-color: #fff;
+        width: 100%;
+        border-top: 1px solid #eaeaec;
+        z-index: 10;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .sm-sort {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .sm-sort-text {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .sm-sort-btn {
+        width: 100%;
+        height: 50px;
+        padding: 14px 0 14px 28px;
+        font-size: 14px;
+        letter-spacing: .9px;
+        color: #535766;
+        border-color: transparent;
+        background-color: #fff;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        text-transform: uppercase;
+        white-space: nowrap;
+        outline: 0;
+        border-radius: 4px;
+    }
+
+    .sm-sort-btn svg {
+        top: 16px;
+        left: 10%;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+    }
+.sm-seperator{
+    border-left: 1px solid #eaeaec !important;
+        width: 1px;
+        height: 22px;
+        z-index: 10;
+}
     .sm-banner-div {
         padding: 68px 6px 12px;
         background-image: linear-gradient(90deg, #bd6da6, #d799cb);
@@ -1468,13 +1528,214 @@ div.lg-assure-org {
         display: table;
         table-layout: fixed;
     }
-.sm-banner-wrapper{
-    text-align: center;
-    display: table-cell;
+
+    .sm-banner-wrapper {
+        text-align: center;
+        display: table-cell;
     }
-    .sm-banner-text{
+
+    .sm-banner-text {
         font-size: 12px;
         text-align: center;
         color: #fff;
     }
+
+    .sm-card-wrapper {
+        clear: both;
+        overflow: hidden;
+    }
+
+    ul.sm-card-wrapper {
+        clear: both;
+    }
+
+    ul.sm-card-wrapper li.sm-card-item:nth-child(even) {
+        border-right: none;
+    }
+
+    ul.sm-card-wrapper li.sm-card-item:nth-child(odd) {
+        clear: left;
+    }
+
+    .sm-card-item {
+        /* clear: left; */
+        border: .5px solid #d4d5d9;
+        float: left;
+        width: 50%;
+        margin: 0;
+        overflow: hidden;
+        border-left: 0;
+    }
+
+    .sm-card-content-wrapper {
+        position: relative;
+        text-align: center;
+    }
+
+    .sm-image-container {
+        height: 255px;
+        position: relative;
+        background-color: rgb(255, 242, 223);
+    }
+
+    .sm-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .sm-rating-div {
+        position: absolute;
+        height: 18px;
+        margin: -28px 0 0 11px;
+        border: 1px solid #eaeaec;
+        border-radius: 2px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 5px;
+        border-radius: 9px;
+    }
+
+    .sm-rating-text {
+        font-size: 10px;
+    }
+
+    i.star {
+        background-image: url(https://constant.myntassets.com/pwa/assets/img/2bce8a2b-e1d5-465a-8980-62f3d778377c1548353615799-Fill-90-Copy-7.png);
+        background-size: cover;
+        position: relative;
+        margin: 0 6px 0 4px;
+        font-size: 9px;
+        padding: 3px;
+
+    }
+
+    .sm-hyphen {
+        color: rgb(148, 150, 159);
+    }
+
+    .sm-rating-count {
+        font-size: 10px;
+        font-weight: 700;
+        margin-left: 5px;
+    }
+
+    .sm-ad-container {
+        background-color: #a9abb3;
+        border-radius: 2px;
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        padding: 0 2px;
+        font-size: 10px;
+        color: #fff;
+    }
+
+    .sm-content-text-wrapper {
+        position: relative;
+
+    }
+
+    .sm-text-wrapper {
+        padding: 8px 0;
+        font-size: 12px;
+    }
+
+    .sm-card-title {
+        padding-left: 8px;
+        line-height: 1.57;
+        text-align: left;
+        color: #282c3f;
+        font-size: 13px;
+        width: 85%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .sm-card-desc {
+        opacity: .6;
+        padding-left: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 180px;
+        margin: 0;
+        font-size: 11px;
+        font-weight: 400;
+        text-align: left;
+        color: #282c3f;
+        height: 12px;
+        line-height: 1.1;
+    }
+
+    .sm-price-container {
+        margin-top: -1px;
+        padding-left: 6px;
+        text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .sm-offer-price {
+        color: #282c3f;
+        font-size: 13px;
+    }
+
+    .sm-offer-price svg {
+        position: relative;
+        top: 4px;
+        /* adjustment */
+        margin-right: -2.4px;
+    }
+
+    .sm-price {
+        position: relative;
+        left: -2px;
+        color: #282c3f;
+    }
+
+    .sm-actual-price {
+        opacity: .4;
+        color: #282c3f;
+        text-decoration: line-through;
+        font-size: 13px;
+    }
+
+    .sm-actual-price svg {
+        position: relative;
+        top: 1px;
+    }
+
+    .sm-discount {
+        color: #ff905a !important;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    .sm-card-empty-div {
+        color: #ff5722;
+        font-size: 12px;
+        font-weight: 700;
+        min-height: 17px;
+        text-align: left;
+        margin-left: 8px;
+    }
+
+    .sm-add-to-cart {
+        color: #282c3f;
+        display: inline-block;
+        position: absolute;
+        bottom: 43px;
+        right: 0;
+        top: 2px;
+        padding-top: 4px;
+        padding-left: 15px;
+        height: 38px;
+    }
+
 }
