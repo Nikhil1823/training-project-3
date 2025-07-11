@@ -1308,8 +1308,131 @@ div.lg-assure-org {
     color: #94969f;
     margin-left: 100px;
 }
-.lg-owner{
+
+.lg-owner {
     flex: 1;
     text-align: end;
-    color:#94969f ;
+    color: #94969f;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.sub-bold {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.text-large {
+    font-size: 16px;
+}
+
+.normal-line {
+    line-height: normal;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+@media screen and (max-width:768px) {
+    main.content-wrapper {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    header.lg-header {
+        display: none;
+    }
+
+    * {
+        font-size: 13px;
+        line-height: 1.42857143;
+        color: #424553;
+    }
+
+    nav.sm-nav {
+        position: fixed;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0 1px 2px 0 rgba(148, 150, 159, .3);
+
+    }
+
+    /* common style  */
+    .sm-common-header-style {
+        display: inline-block;
+        vertical-align: top;
+        width: 24px;
+        height: 24px;
+        margin: 16px;
+    }
+
+
+
+
+
+    .sm-nav-back svg,
+    .sm-logo-style {
+        color: #282c3f;
+    }
+
+    .sm-logo-div {
+        margin-left: 0;
+        /* float: right; */
+        /* modification  */
+        margin-left: -3px;
+    }
+
+    .sm-nav-header-title {
+        font-size: 16px;
+        top: 11px;
+        position: relative;
+        font-weight: 700;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: normal;
+        height: auto;
+        margin: 0;
+        width: calc(100% - 260px);
+        text-transform: capitalize;
+        /* adjustment  */
+        margin-left: -2.2px;
+
+    }
+
+    .sm-nav-right {
+        float: right;
+
+    }
+
+    .sm-wish-list {
+        /* display: inline-block; */
+        position: relative;
+        top: 1px;
+        /* vertical-align: top; */
+        height: 22px;
+        margin: 17px 13px 16px 0;
+        width: 24px;
+    }
+
+    .sm-search-logo,
+    .sm-fav-list,
+    .sm-shop-cart {
+        vertical-align: unset;
+        margin-left: 0;
+        /* adjustment */
+        margin-right: 13.6px;
+    }
+
+    .sm-shop-cart {
+        /* adjustment */
+        margin-right: 16px;
+    }
+
 }
