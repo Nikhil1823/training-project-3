@@ -735,6 +735,10 @@ ul.lg-sort-list {
     padding: 10px 20px;
 }
 
+ul.lg-sort-list li label input {
+    display: none;
+}
+
 ul.selected-sort-list {
     font-size: 14px;
 
@@ -753,6 +757,7 @@ ul.selected-sort-list li label {
     padding: 5px 8px 5px 10px;
     white-space: nowrap;
 }
+
 
 label h4.selected-option {
     font-weight: 400;
@@ -940,6 +945,14 @@ h4.lg-card-desc {
     margin-left: 5px;
 }
 
+div.lg-is-limited {
+    color: #ff5722;
+    font-size: 12px;
+
+    text-align: left;
+
+}
+
 div.pagination-section ul.lg-page-bar {
     text-align: center;
     border-top: 1px solid #edebef;
@@ -1089,6 +1102,10 @@ tr {
     box-sizing: content-box;
 }
 
+th.extra-w {
+    width: 50.538px;
+}
+
 .lg-last-up-date {
     font-style: italic;
     padding: 10px 0 0 6px;
@@ -1218,11 +1235,53 @@ div.lg-assure {
 
 }
 
+.lg-down-link{
+    display: inline-block;
+    font-size: 15px;
+    line-height: 19px;
+}
+.lg-download{
+    background-color: transparent;
+}
+.pstore{
+    margin-right: 10px;
+        height: 42px;
+}
 .lg-keep-touch {
     font-size: 12px;
     margin-bottom: 10px;
     font-weight: 700;
     margin-top: 20px;
+}
+
+.lg-dsk-icon {
+    margin-right: 15px;
+    display: inline-block;
+    box-sizing: content-box;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.fb img,
+.tw img {
+    width: 20px;
+    height: 20px;
+
+}
+.fb{
+    width: 20px;
+        height: 21px;
+}
+.yt img {
+    width: 28px;
+    height: 20px;
+}
+
+.ig img {
+    width: 20px;
+    height: 22px;
+    position: relative;
+    top: 1px;
 }
 
 div.lg-assure-org {
@@ -1238,6 +1297,13 @@ div.lg-assure-org {
     height: 40px;
 }
 
+.lg-assure-icon img{
+    width: 48px;
+        height: 40px;
+}
+.h49{
+    height: 49px !important;
+}
 .lg-assure-text {
 
     color: #696b79;
@@ -1336,31 +1402,71 @@ div.lg-assure-org {
     display: inline-block;
 }
 
+
+
+nav.sm-nav {
+    display: none;
+}
+
+div.sm-banner-div {
+    display: none;
+}
+
+div.sm-filters-div {
+    display: none;
+}
+
+div.sm-product-container {
+    display: none;
+}
+
+footer.sm-footer {
+    display: none;
+}
+
+
+@media (max-width: 1366px) {
+    div.lg-header-wrapper div.lg-nav-middle {
+        width: 320px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 1250px) {
+    div.lg-header-wrapper div.lg-nav-middle {
+        width: 280px;
+    }
+
+    div.lg-header-wrapper div.lg-logo-container {
+        margin-left: 2%;
+    }
+}
+
+@media (max-width: 1199px) {
+    div.lg-header-wrapper div.lg-nav-middle {
+        width: 200px;
+
+    }
+
+    div.lg-header-wrapper div.lg-nav-right {
+        width: 170px
+    }
+
+
+
+}
+
+
+@media screen and (max-width:1079px) {
+    div.lg-header-wrapper div.lg-nav-middle {
+        width: 100px;
+
+    }
+}
+
 @media screen and (max-width:768px) {
 
-    /* @font-face {
-            font-family: Assistant;
-            src: url(//constant.myntassets.com/www/fonts/Assistant-Regular.woff2) format('woff2'), url(//constant.myntassets.com/www/fonts/Assistant-Regular.woff) format('woff'), url(//constant.myntassets.com/www/fonts/Assistant-Regular.ttf) format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap
-        }
-    
-        @font-face {
-            font-family: Assistant;
-            src: url(//constant.myntassets.com/www/fonts/Assistant-Bold.woff2) format('woff2'), url(//constant.myntassets.com/www/fonts/Assistant-Bold.woff) format('woff'), url(//constant.myntassets.com/www/fonts/Assistant-Bold.ttf) format('truetype');
-            font-weight: 700;
-            font-style: normal;
-            font-display: swap
-        }
-    
-        @font-face {
-            font-family: Assistant-Bold;
-            src: url(//constant.myntassets.com/www/fonts/Assistant-Bold.woff2) format('woff2'), url(//constant.myntassets.com/www/fonts/Assistant-Bold.woff) format('woff'), url(//constant.myntassets.com/www/fonts/Assistant-Bold.ttf) format('truetype');
-            font-weight: 700;
-            font-style: normal;
-            font-display: swap
-        } */
+
     main.content-wrapper {
         display: none;
     }
@@ -1371,6 +1477,26 @@ div.lg-assure-org {
 
     header.lg-header {
         display: none;
+    }
+
+    nav.sm-nav {
+        display: block;
+    }
+
+    div.sm-banner-div {
+        display: table;
+    }
+
+    div.sm-filters-div {
+        display: flex;
+    }
+
+    div.sm-product-container {
+        display: block;
+    }
+
+    footer.sm-footer {
+        display: block;
     }
 
     * {
@@ -1748,12 +1874,14 @@ div.lg-assure-org {
         color: #3e4152;
         ;
     }
-    .sm-footer-header::after,.sm-footer-header::before{
+
+    .sm-footer-header::after,
+    .sm-footer-header::before {
         content: ' ';
         display: table;
         clear: both;
     }
-  
+
 
     .sm-footer-header-text {
         line-height: 24px;
