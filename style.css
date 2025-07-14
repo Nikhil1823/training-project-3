@@ -1559,10 +1559,9 @@ div.sm-bottom-drawer{
 
 @media screen and (max-width:768px) {
 
-    div.lg-side-ad{
+ div.lg-side-ad{
         display: none;
     }
-
     main.content-wrapper {
         display: none;
     }
@@ -1580,7 +1579,9 @@ div.sm-bottom-drawer{
     }
 
     div.sm-banner-div {
-        display: table;
+        /* display: table; */
+        /* test  */
+        display:none;
     }
 
     div.sm-filters-div {
