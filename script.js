@@ -185,7 +185,9 @@ window.addEventListener("resize", async () => {
   populateDOM(data);
 });
 
-const commonSorter = async (sorting_parameter, reverse) => {
+const commonSorter = async (element) => {
+  const reverse = element.getAttribute("data-reverse") == "true";
+  const sorting_parameter = element.value;
   const data = await fetchData();
   let res = "";
   res = data.sort((a, b) => {
@@ -202,12 +204,47 @@ const selectedSortLabel = document.querySelector("span.lg-sort-selected");
 selectedSortList.forEach((input) => {
   input.addEventListener("click", () => {
     selectedSortLabel.textContent = input.parentElement.innerText;
-    const reverse = input.getAttribute("data-reverse") == "true";
-    commonSorter(input.value, reverse);
+    commonSorter(input);
     const listItems = input.closest("ul");
     listItems.querySelectorAll("label.sort-label").forEach((label) => {
       label.classList.remove("lg-sort-selected");
     });
     input.parentElement.classList.add("lg-sort-selected");
   });
+});
+
+const sm_sort_button = document.querySelector(".sm-filters-div .sm-sort");
+const sm_bottom_drawer = document.querySelector(".sm-bottom-drawer");
+sm_sort_button.addEventListener("click", (e) => {
+  //to prevent event bubliing
+  e.stopPropagation()
+
+  sm_bottom_drawer.style.display = "block";
+  const sm_list_button = sm_bottom_drawer.querySelectorAll(".sm-list-item");
+  sm_list_button.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      console.log("clicked me", btn);
+
+      commonSorter(btn);
+    });
+  });
+});
+const drawerItems = sm_bottom_drawer.querySelectorAll("li");
+
+drawerItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    drawerItems.forEach((label) => {
+      label.classList.remove("selected");
+    });
+    item.classList.add("selected");
+  });
+});
+
+// to hide the sort section if i click outsie that div
+//remember the occurence of event bubling
+document.addEventListener("click", (e) => {
+  const sortTable = document.querySelector(".sm-bottom-drawer");
+  if (sortTable.style.display == "block" && !sortTable.contains(e.target)) {
+    sortTable.style.display = "none";
+  }
 });
