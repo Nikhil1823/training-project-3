@@ -1497,6 +1497,15 @@ footer.sm-footer {
     }
 }
 
+
+@media screen and (max-width:380px){
+    .sm-banner-text{
+        font-size: 12px !important;
+    }
+    .sm-banner-div{
+        padding: 68px 6px 12px !important;
+    }
+}
 @media screen and (max-width:768px) {
 
 
@@ -1758,7 +1767,7 @@ footer.sm-footer {
     }
 
     .sm-banner-div {
-        padding: 68px 6px 12px;
+        padding: 72px 8px 16px;
         background-image: linear-gradient(90deg, #bd6da6, #d799cb);
         width: 100%;
         /* display: flex;
@@ -1774,7 +1783,7 @@ footer.sm-footer {
     }
 
     .sm-banner-text {
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
         color: #fff;
     }
