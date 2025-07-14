@@ -18,7 +18,15 @@
 
 
 * {
-    font-family: 'Assistant';
+    font-family: Assistant,
+        -apple-system,
+        BlinkMacSystemFont,
+        Segoe UI,
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    ;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -581,6 +589,7 @@ div.lg-double-slider-inner div.lg-slider-value {
     font-size: 12px;
     font-weight: 600;
     line-height: 16px;
+    transform: translateY(1px);
 
 }
 
@@ -1062,6 +1071,44 @@ div.pagination-section ul.lg-page-bar {
     height: 8px;
 }
 
+
+
+div.lg-side-ad {
+    position: fixed;
+    right: 0;
+    bottom: 130px;
+    width: 44px;
+    height: 288px;
+    background-color: #535766;
+    letter-spacing: 1px;
+    cursor: pointer;
+    z-index: 18;
+}
+
+div.lg-side-ad-arrow {
+    border-right: 14px solid #fff;
+    margin: 24px 16px;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+
+}
+
+div.lg-side-ad-text {
+    transform: rotate(-180deg);
+    white-space: nowrap;
+    width: 36px;
+    height: 200px;
+    padding: 4px;
+    vertical-align: middle;
+    font-size: 24px;
+    color: #fff;
+    box-sizing: content-box;
+    writing-mode: vertical-rl;
+    text-align: center;
+    
+
+}
+
 footer.lg-footer {
     background-color: #fafbfc;
     margin-top: 50px;
@@ -1456,7 +1503,9 @@ div.sm-product-container {
 footer.sm-footer {
     display: none;
 }
-
+div.sm-bottom-drawer{
+    display: none;
+}
 
 @media (max-width: 1366px) {
     div.lg-header-wrapper div.lg-nav-middle {
@@ -1498,14 +1547,16 @@ footer.sm-footer {
 }
 
 
-@media screen and (max-width:380px){
-    .sm-banner-text{
+@media screen and (max-width:380px) {
+    .sm-banner-text {
         font-size: 12px !important;
     }
-    .sm-banner-div{
+
+    .sm-banner-div {
         padding: 68px 6px 12px !important;
     }
 }
+
 @media screen and (max-width:768px) {
 
 
@@ -1671,18 +1722,20 @@ footer.sm-footer {
 
     .sm-drawer-list li {
         margin: 15px auto;
-        color:#3e4152;
+        color: #3e4152;
 
     }
 
     .sm-drawer-list li.selected {
         border-left: 2px solid #ff3e6c;
         color: #ff517b !important;
-        font-weight:700;
+        font-weight: 700;
     }
-.sm-drawer-list li.selected button span.sm-button-text{
-    color: #ff517b;
-}
+
+    .sm-drawer-list li.selected button span.sm-button-text {
+        color: #ff517b;
+    }
+
     .sm-drawer-list .sm-list-element-wrapper {
         position: relative;
         overflow: hidden;
@@ -1707,14 +1760,15 @@ footer.sm-footer {
         right: -17px;
 
     }
-.sm-list-item .sm-button-text{
+
+    .sm-list-item .sm-button-text {
         padding: 7.5px 0;
-            position: absolute;
-            width: 82%;
-            top: 0;
-            font-size: 14px;
-            left: 65px;
-            /* color: inherit; */
+        position: absolute;
+        width: 82%;
+        top: 0;
+        font-size: 14px;
+        left: 65px;
+        /* color: inherit; */
 
     }
 
