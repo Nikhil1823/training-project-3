@@ -1579,9 +1579,8 @@ div.sm-bottom-drawer{
     }
 
     div.sm-banner-div {
-        /* display: table; */
-        /* test  */
-        display:none;
+        display: table;
+     
     }
 
     div.sm-filters-div {
