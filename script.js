@@ -17,29 +17,36 @@ const endPart = ` <li class="lg-card"></li>
 // injector
 const domInjector = (product) => {
   if (window.innerWidth >= 768) {
-    lgDom.innerHTML = product+endPart;
+    lgDom.innerHTML = product + endPart;
   } else {
-    smDom.innerHTML = product+endPart;
+    smDom.innerHTML = product + endPart;
   }
 };
 
 // data populator
 
 const populateDOM = (data) => {
-    let res=''
+  let res = "";
   if (window.innerWidth >= 768) {
-    res= data
+    res = data
       .map((product) => {
         return `<li class="lg-card">
                                 <div class="lg-card-mask"></div>
                                 ${
                                   product.starCount > 0
                                     ? `  <div class="lg-card-rating-container">
-                                    <span class="lg-rating">${product.starCount}</span>
+                                    <span class="lg-rating">${
+                                      product.starCount
+                                    }</span>
                                     <span class="lg-star"></span>
                                     <div class="lg-rating-count">
                                         <span class="lg-seperator">|</span>
-                                        <span class="lg-rating-count-text">${product.rating}</span>
+                                        <span class="lg-rating-count-text">${
+                                          product.rating > 999
+                                            ? String(product.rating / 1000) +
+                                              "k"
+                                            : product.rating
+                                        }</span>
                                     </div>
                                 </div>`
                                     : ``
@@ -83,7 +90,7 @@ const populateDOM = (data) => {
       })
       .join("");
   } else {
-     res= data
+    res = data
       .map((product) => {
         return `<li class="sm-card-item">
                 <div class="sm-card-content-wrapper">
@@ -94,10 +101,16 @@ const populateDOM = (data) => {
                     ${
                       product.starCount > 0
                         ? ` <div class="sm-rating-div">
-                        <span class="sm-rating-text bold">${product.starCount}</span>
+                        <span class="sm-rating-text bold">${
+                          product.starCount
+                        }</span>
                         <i class="star"></i>
                         <span class="sm-hyphen">|</span>
-                        <span class="sm-rating-count">${product.rating}</span>
+                        <span class="sm-rating-count">${
+                          product.rating > 999
+                            ? String(product.rating / 1000) + "k"
+                            : product.rating
+                        }</span>
                     </div>`
                         : ``
                     }
@@ -158,16 +171,43 @@ const populateDOM = (data) => {
             </li>`;
       })
       .join("");
-  
-    }
-    domInjector(res);
+  }
+  domInjector(res);
 };
 
 fetchData();
-window.addEventListener('load',async()=>{
-    const data=await fetchData()
-    populateDOM(data)
-})
+window.addEventListener("load", async () => {
+  const data = await fetchData();
+  populateDOM(data);
+});
+window.addEventListener("resize", async () => {
+  const data = await fetchData();
+  populateDOM(data);
+});
 
+const commonSorter = async (sorting_parameter, reverse) => {
+  const data = await fetchData();
+  let res = "";
+  res = data.sort((a, b) => {
+    return b[sorting_parameter] - a[sorting_parameter];
+  });
 
-const commonSorter=()=>{}
+  return reverse ? populateDOM(res.reverse()) : populateDOM(res);
+};
+
+const selectedSortList = document.querySelectorAll(
+  "ul.lg-sort-list li label input"
+);
+const selectedSortLabel = document.querySelector("span.lg-sort-selected");
+selectedSortList.forEach((input) => {
+  input.addEventListener("click", () => {
+    selectedSortLabel.textContent = input.parentElement.innerText;
+    const reverse = input.getAttribute("data-reverse") == "true";
+    commonSorter(input.value, reverse);
+    const listItems = input.closest("ul");
+    listItems.querySelectorAll("label.sort-label").forEach((label) => {
+      label.classList.remove("lg-sort-selected");
+    });
+    input.parentElement.classList.add("lg-sort-selected");
+  });
+});

@@ -691,6 +691,16 @@ div.lg-sorting-section div.lg-sort-by {
     background-color: #fff;
     border: 1px solid #d4d5d9;
 }
+div.lg-sort-by:hover{
+    ul.lg-sort-list{
+        display: block;
+    }
+}
+ul.lg-sort-list li:hover{
+    background-color: #f4f4f5;
+    cursor: pointer;
+        /* font-weight: 700; */
+}
 
 div.lg-sort-by span.lg-arrow {
     background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
@@ -707,9 +717,12 @@ div.lg-sort-by span.lg-arrow {
     color: #282c3f;
 }
 
-span.lg-sort-selected {
+.lg-sort-selected {
     font-weight: 700;
 
+}
+label.lg-sort-selected{
+    background-color: #f4f4f5;
 }
 
 ul.lg-sort-list {
@@ -1048,10 +1061,15 @@ div.pagination-section ul.lg-page-bar {
 
 footer.lg-footer {
     background-color: #fafbfc;
+    margin-top: 50px;
 }
 
-div.lg-footer-wrapper {
+div.lg-outer-container{
     padding: 30px 0 40px 0;
+    position: relative;
+   
+}
+div.lg-footer-wrapper {
     position: relative;
 
     max-width: 1080px;
@@ -1246,6 +1264,8 @@ div.lg-assure {
 .pstore{
     margin-right: 10px;
         height: 42px;
+        /* adjustment */
+        margin-right: 8px;
 }
 .lg-keep-touch {
     font-size: 12px;
@@ -1255,11 +1275,13 @@ div.lg-assure {
 }
 
 .lg-dsk-icon {
-    margin-right: 15px;
+    /* margin-right: 15px; */
     display: inline-block;
     box-sizing: content-box;
     font-size: 15px;
     line-height: 19px;
+    /* adjustment  */
+    margin-right: 12px;
 }
 
 .fb img,
