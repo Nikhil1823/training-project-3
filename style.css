@@ -1559,6 +1559,9 @@ div.sm-bottom-drawer{
 
 @media screen and (max-width:768px) {
 
+    div.lg-side-ad{
+        display: none;
+    }
 
     main.content-wrapper {
         display: none;
