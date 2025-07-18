@@ -1506,6 +1506,12 @@ footer.sm-footer {
 div.sm-bottom-drawer{
     display: none;
 }
+
+@media screen and (min-width:1500px){
+    div.lg-header-wrapper div.lg-nav-middle {
+        width: 32% !important;
+    }
+}
 @media screen and (min-width:1400px) {
     div.lg-header-wrapper div.lg-nav-middle{
         width: 400px;
