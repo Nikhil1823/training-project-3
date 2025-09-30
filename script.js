@@ -217,7 +217,6 @@ const sm_bottom_drawer = document.querySelector(".sm-bottom-drawer");
 sm_sort_button.addEventListener("click", (e) => {
   //to prevent event bubliing
   e.stopPropagation()
-
   sm_bottom_drawer.style.display = "block";
   const sm_list_button = sm_bottom_drawer.querySelectorAll(".sm-list-item");
   sm_list_button.forEach((btn) => {
