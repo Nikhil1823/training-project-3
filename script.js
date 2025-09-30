@@ -226,7 +226,6 @@ sm_sort_button.addEventListener("click", (e) => {
   });
 });
 const drawerItems = sm_bottom_drawer.querySelectorAll("li");
-
 drawerItems.forEach((item) => {
   item.addEventListener("click", () => {
     drawerItems.forEach((label) => {
@@ -237,7 +236,7 @@ drawerItems.forEach((item) => {
 });
 
 // to hide the sort section if i click outsie that div
-//remember the occurence of event bubling
+//remember the occurence of event bubbling
 document.addEventListener("click", (e) => {
   const sortTable = document.querySelector(".sm-bottom-drawer");
   if (sortTable.style.display == "block" && !sortTable.contains(e.target)) {
