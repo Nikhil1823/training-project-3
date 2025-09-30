@@ -193,7 +193,6 @@ const commonSorter = async (element) => {
   res = data.sort((a, b) => {
     return b[sorting_parameter] - a[sorting_parameter];
   });
-
   return reverse ? populateDOM(res.reverse()) : populateDOM(res);
 };
 
