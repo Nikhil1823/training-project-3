@@ -1,7 +1,7 @@
 const fetchData = async () => {
   const data = await fetch("data.json");
   const res = await data.json();
-  console.log(res);
+  
   return res;
 };
 
