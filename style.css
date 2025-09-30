@@ -61,8 +61,7 @@ div.lg-header-wrapper {
 
 div.lg-header-wrapper div.lg-logo-container {
     margin-left: 4%;
-    /* margin-left: 2%; */
-    height: inherit;
+     height: inherit;
     line-height: 80px;
     vertical-align: middle;
     float: left;
