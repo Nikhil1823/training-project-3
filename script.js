@@ -221,9 +221,7 @@ sm_sort_button.addEventListener("click", (e) => {
   const sm_list_button = sm_bottom_drawer.querySelectorAll(".sm-list-item");
   sm_list_button.forEach((btn) => {
     btn.addEventListener("click", () => {
-      console.log("clicked me", btn);
-
-      commonSorter(btn);
+     commonSorter(btn);
     });
   });
 });
