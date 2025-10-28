@@ -5,8 +5,6 @@ const fetchData = async () => {
   return res;
 };
 
-
-
 const lgDom = document.querySelector(
   "ul.lg-card-layout-collection.filter-headers"
 );
