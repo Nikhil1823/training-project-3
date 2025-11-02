@@ -127,8 +127,6 @@ span.lg-hover-container span.lg-hover-text {
     color: #ff3f6c;
 }
 
-
-
 div.lg-header-wrapper div.lg-nav-middle {
     width: 320px;
     margin-right: 8px;
@@ -137,9 +135,6 @@ div.lg-header-wrapper div.lg-nav-middle {
     position: relative;
     float: right;
   }
-
-
-
 
 div.lg-nav-middle input {
     display: inline-block;
