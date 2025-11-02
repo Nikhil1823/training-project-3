@@ -27,6 +27,7 @@ const domInjector = (product) => {
 
 const populateDOM = (data) => {
   let res = "";
+  
   if (window.innerWidth >= 768) {
     res = data
       .map((product) => {
